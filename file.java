@@ -21,12 +21,11 @@ public class Movies {
     displayMovies(secondMovie);
     displayMovies(thirdMovie);
 
+    // print
     float avgImdbRating = (firstMovie.imdbRating + secondMovie.imdbRating + thirdMovie.imdbRating) / 3;
     System.out.println("Average IMDb Rating: " + avgImdbRating);
-
     System.out.println(firstMovie.movieName + " has a higher rating on IMDb than " + thirdMovie.movieName + ": " + (firstMovie.imdbRating > thirdMovie.imdbRating));
-    
-    System.out.println("The two movies have a rating of 8.0 or better: " + (firstMovie.imdbRating >= 8.0 && secondMovie.imdbRating >= 8.0));
+    System.out.println("All three movies have a rating of 8.0 or better: " + (firstMovie.imdbRating >= 8.0 && secondMovie.imdbRating >= 8.0 && thirdMovie.imdbRating >= 8.0));
   }
   public static void displayMovies(Movies movie) {
     System.out.printf("Movie Name: %s%nDirector: %s%nIMDb Rating: %.1f%n%n",
